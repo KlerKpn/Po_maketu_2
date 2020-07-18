@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Ubuntu', sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+}
+
+html {
+  font-family: 'Ubuntu';
+  font-size: 20px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.wrap {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+@media (max-width: 1200px) {
+  .wrap {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+.header {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  font-size: .8rem;
+}
+
+.header .navbar {
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #c6d1d1;
+}
+
+.header .navbar .navbar-collapse {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.carousel {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.carousel .carousel-inner .carousel-item img {
+  margin-top: -10%;
+}
+
+footer {
+  height: 200px;
+}
+/*# sourceMappingURL=style.css.map */
