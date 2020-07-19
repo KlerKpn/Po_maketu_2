@@ -3,12 +3,28 @@
   src: url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 }
 
+:root {
+  --basemargin: 50px;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --basemargin: 25px;
+  }
+}
+
 html {
-  font-family: 'Ubuntu';
   font-size: 20px;
 }
 
+.box-default {
+  background: #f9f9f9;
+  -webkit-box-shadow: 0 0 20px #888888;
+          box-shadow: 0 0 20px #888888;
+}
+
 body {
+  font-family: 'Ubuntu', sans-serif;
   overflow-x: hidden;
 }
 
@@ -19,36 +35,47 @@ body {
 
 @media (max-width: 1200px) {
   .wrap {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 0 5% 0 5%;
   }
 }
 
 .header {
-  text-transform: uppercase;
-  margin-bottom: 50px;
-  font-size: .8rem;
+  margin-bottom: var(--basemargin);
+  font-size: 1rem;
 }
 
 .header .navbar {
   padding-left: 5%;
   padding-right: 5%;
-  background-color: #c6d1d1;
 }
 
 .header .navbar .navbar-collapse {
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: uppercase;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-.carousel {
-  width: 100%;
-  margin-bottom: 50px;
+main > * {
+  margin-bottom: var(--basemargin);
 }
 
-.carousel .carousel-inner .carousel-item img {
+main .carousel {
+  width: 100%;
+}
+
+main .carousel .carousel-inner .carousel-item img {
   margin-top: -10%;
+}
+
+main .cards-area {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(290px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-gap: 50px;
+  font-size: .8rem;
 }
 
 footer {

@@ -3,47 +3,72 @@
     src: url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
     
 }
+:root{
+    --basemargin: 50px;
+        @media (max-width: 600px) {
+            --basemargin: 25px;
+        }
+}
 html{
-    font-family: 'Ubuntu';
     font-size: 20px;
 }
+.box-default{
+    background: #f9f9f9;
+    box-shadow: 0 0 20px rgb(136, 136, 136);
+}
 body{
+    font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
 }
 .wrap{
     padding-left: 15%;
     padding-right: 15%;
         @media (max-width: 1200px) {
-            padding-left: 5%;
-            padding-right: 5%;
+            padding: 0 5% 0 5%;
         }
 }
 .header{
-    text-transform: uppercase;
-    margin-bottom: 50px;
-    font-size: .8rem;
+    margin-bottom: var(--basemargin);
+    font-size: 1rem;
     .navbar{
         padding-left: 5%;
         padding-right: 5%;
-        background-color:  #c6d1d1;
             .navbar-collapse{
+                font-family: 'Times New Roman', Times, serif;
+                text-transform: uppercase;
                 justify-content: flex-end;
             }
     }
 }
-.carousel{
-    width: 100%;
-    margin-bottom: 50px;
-    .carousel-inner{
-        .carousel-item{
-           
-            img{
-                margin-top: -10%;
-            }
-         }
+main > *{
+    margin-bottom: var(--basemargin);
+}
+main{
+    .carousel{
+        width: 100%;
+        .carousel-inner{
+            .carousel-item{
+                img{
+                    margin-top: -10%;
+                }
+             }
+        }
     }
-}    
+    .cards-area{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+        grid-gap: 50px;
+        font-size: .8rem;
+            .card{
+                .card-wrap{
+                    img{
+                        
+                        
+                    }
+                }
+            }
+    } 
+}   
 footer{
   height: 200px;
-
 }

@@ -8,16 +8,16 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header box-default">
       <nav class="navbar navbar-expand-md navbar-light">
-        <a class="navbar-brand" href="#">Brand</a>
+        <a class="navbar-brand" href="#">Travel band</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#">Home <span class="sr-only">(2)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Features</a>
@@ -39,12 +39,24 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="img/1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Lorem ipsum dolor sit.</h5>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, temporibus!</p>
+            </div>
           </div>
           <div class="carousel-item">
             <img src="img/2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Lorem, ipsum.</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nulla totam quos itaque sunt dolorum?</p>
+            </div>
           </div>
           <div class="carousel-item">
             <img src="img/3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, omnis.</p>
+            </div>
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -56,9 +68,21 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-     <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit iusto cum accusantium deserunt, libero esse sunt, nesciunt ipsum dolorem facilis repellat necessitatibus dolores dolorum vel et perferendis, sequi soluta veniam corrupti. Nostrum vel maxime quo accusamus incidunt, deleniti impedit ad dicta aliquam, doloribus dolorem sunt odio ea quos recusandae minus.</span>
+     <div class="main-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit iusto cum accusantium deserunt, libero esse sunt, nesciunt ipsum
+        dolorem facilis repellat necessitatibus dolores dolorum vel et perferendis, sequi soluta veniam corrupti. Nostrum vel maxime
+        quo accusamus incidunt, deleniti impedit ad dicta aliquam, doloribus dolorem sunt odio ea quos recusandae minus.</div>
+        <div class="cards-area" id="id">
+          <div class="card" v-for="item in items">
+            <div class="card-wrap">
+              <img :src="item.url" class="card-img-top" alt="Your dream">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
     </main>
-    <footer class="footer">
+    <footer class="footer box-default">
       <span>
         fdsf
       </span>
@@ -66,5 +90,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
