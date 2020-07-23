@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @font-face {
   font-family: 'Ubuntu', sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
@@ -74,11 +75,97 @@ main .cards-area {
   display: grid;
   -ms-grid-columns: (minmax(290px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  grid-gap: 50px;
+  grid-gap: var(--basemargin);
   font-size: .8rem;
 }
 
+main .load-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .load-div .btn {
+  background: none;
+  color: black;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.singup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f5f5f5;
+  height: 350px;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+}
+
+.singup .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.singup .col input {
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  background: none;
+  border-bottom: 1px solid black;
+}
+
+.singup .col input:focus {
+  outline: none;
+}
+
 footer {
-  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 140px;
+  background-color: #2e2e2e;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+footer .container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .container .footer-left span {
+  margin-left: 25px;
+}
+
+footer .container .footer-right ul {
+  padding: 0;
+  list-style: none;
+}
+
+footer .container .footer-right ul li {
+  padding-left: 25px;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
