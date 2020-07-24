@@ -1,4 +1,6 @@
-const yourUrlGet = '/test.html'
+const pageOnload = '/cards.json'
+const yourUrlGet = '/cards.json'
+const yourPhone = 'x-xxx-xxx-xx-xx'
 
 const cards = new Vue ({
     el:"#id",
@@ -6,34 +8,29 @@ const cards = new Vue ({
         items: []
     },
     mounted() {
-        axios.get("/cards.json").then(response => {
+        axios.get(pageOnload).then(response => {
         this.items = response.data 
         })
     },
-    
-})
-
-$('#load').on('click', function() { 
-    const btn = $(this)
-    const spin = btn.find('div') 
-    $.ajax({
-        url: yourUrlGet,
-        type: "GET",
-        // data: "data",
-        // datatype: "datatype" 
-        beforeSend: function(){
+    methods: {
+        load() {
+            const btn = $('#load')
+            const spin = btn.find('div') 
             btn.attr('disabled', true)
             spin.css('display','inline-block')
-        },
-        success: function (response) {
             setTimeout(() => {
-                btn.attr('disabled', false)
-                spin.css('display','none')
-                $('.load-div').before(response)
+                axios.get(yourUrlGet).then(response => {
+                for(let i in response.data){
+                    this.items.push(response.data[i]) 
+                }
+                    btn.attr('disabled', false)
+                    spin.css('display','none')         
+                })
             }, 1000)
-        },
-        error: function(){
-            alert('err')
         }
-    })
+    }
+})               
+
+$('#call').on('click', function(){
+    alert(`Phone ${yourPhone}`)
 })

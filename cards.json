@@ -1,9 +1,11 @@
 [  
-    {"url" : "/img_cards/card_1.jpg"},
-    {"url" : "/img_cards/card_2.jpg"},
-    {"url" : "/img_cards/card_3.jpg"},
-    {"url" : "/img_cards/card_4.jpg"},
-    {"url" : "/img_cards/card_5.jpg"},
-    {"url" : "/img_cards/card_6.jpg"},
-    {"url" : "/img_cards/card_7.jpg"}
+    {"url" : "/img_cards/card_1.jpg", "text": "Some quick example text to build on the card title and make up the bulk of the card's content."},
+    {"url" : "/img_cards/card_2.jpg", "text": "Some quick example text to build on the card title and make up the bulk of the card's content."},
+    {"url" : "/img_cards/card_3.jpg", "text": "Some quick example text to build on the card title and make up the bulk of the card's content."},
+    {"url" : "/img_cards/card_4.jpg", "text": "Some quick example text to build on the card title and make up the bulk of the card's content."},
+    {"url" : "/img_cards/card_5.jpg", "text": "Some quick example text to build on the card title and make up the bulk of the card's content."},
+    {"url" : "/img_cards/card_6.jpg", "text": "Some quick example text to build on the card title and make up the bulk of the card's content."},
+    {"url" : "/img_cards/card_7.jpg", "text": "Some quick example text to build on the card title and make up the bulk of the card's content."}
 ]
+
+
